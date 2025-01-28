@@ -1,0 +1,92 @@
+# ARRAY - linear DS 
+
+# import array as arr
+# a=arr.array('i',[10,20,30,40,50])
+# print(a)
+# print(a[0])
+
+# a=arr.array('d',[1,3,5])
+# print(a)
+
+#adding element 
+# a.append(2.5)
+# a.extend([2.2,3.2])
+
+#removing
+# a.remove(5)
+
+# Acessing element 
+# print(a[0])
+
+#pop - remove last element
+# a.pop() #return array after removing last ele
+# print(a.pop())  #return only removed ele 
+
+# Iterate
+# for i in a:
+#     print(i)
+
+# import array as arr
+# b=arr.array('i',[1,2,3])
+# print(b)
+# print(b[0])
+# b.append(12)
+# print(b)
+# b.extend([13])
+# print(b)
+# b.remove(12)
+# print(b)
+# b.pop()
+# print(b)
+# for i in b:
+#     print(i)
+
+# NumPy as Arrays
+# NumPy supports multi-dimensional arrays and a wide range of operations like mathematical computations, slicing, and more.
+
+# import numpy as np
+# Create a 1D NumPy array
+# arr=np.array([1,2,3,4,5])
+# print(arr)
+
+# Create a 2D NumPy array
+# matrix=np.array([[1,2],[3,4]])
+# print(matrix)
+
+# arr=np.array([1,2,3,4,5])
+# Element-wise operations
+# arr=arr*2
+# print(arr)
+
+# Slicing
+# print(arr[1:4])
+
+# Mathematical operations
+# print(np.sum(arr))
+# print(np.mean(arr))
+# print(np.dot(arr,arr))
+
+# Create a 2D array
+# mat=np.array([[1,2,3,4],[5,6,7,8]])
+# print(mat)
+
+# Access elements
+# print(mat[1,2])
+
+# Slice rows and columns
+# print(mat[:,1])
+
+
+# Lists as Arrays
+
+# arr=[10,20.0,30,40,50,'hello']
+# arr.append(60)
+# arr.extend([100,110])
+# arr.pop()
+# print(arr)
+# print(arr.pop())
+# print(arr.pop(0))
+# print(arr[0])
+# for i in arr:
+#     print(i)
+
