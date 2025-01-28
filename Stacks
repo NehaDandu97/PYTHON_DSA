@@ -1,0 +1,154 @@
+#STACK- linear DS , LIFO,adding and removing from same end 
+#Operations - push , pop
+#Time complexity - O(1)
+
+# class Stack(object):
+#     #initalisation
+#     def __init__(self):
+#         self.stack=[]
+#         self.noofitems=0
+#     #checking empty
+#     def isEmpty(self):
+#         return self.stack==[]
+#     #pushing 
+#     def push(self,data):
+#         self.stack.insert(self.noofitems,data)
+#         self.noofitems+=1
+#         return '{} pushed into stack'.format(data)
+#     #pop
+#     def pop(self):
+#         self.noofitems-=1
+#         data=self.stack.pop(self.noofitems)
+#         return '{} pop from stack'.format(data)
+#     #size of stack
+#     def size(self):
+#         return len(self.stack)
+    
+# #Testing 
+# if __name__=='__main__':
+#     s=Stack()
+#     print(s.push(1))
+#     print(s.push(2))
+#     print(s.push(3))
+#     print(s.push(4))
+#     print(s.push(5))
+#     print("\n")
+#     print(s.pop())
+#     print(s.pop())
+#     print(" ")
+#     print(s.size())
+
+
+# class Stack:
+#     def __init__(self,stack,items):
+#         self.stack=stack
+#         self.items=items
+#     def isEmpty(self):
+#         if self.stack==[]:
+#             return True
+#         return False
+#     def Push(self,data):
+#         self.stack.insert(self.items,data)
+#         self.items+=1
+#         return f'{data} pushed into stack'
+#     def Pop(self):
+#         self.items-=1
+#         data=self.stack.pop(self.items)
+#         return f'{data} poped from stack'
+#     def Stacksize(self):
+#         return len(self.stack)
+# o1=Stack([],0)
+# # print(o1.stack)
+# # print(o1.items)
+# print(o1.isEmpty())
+# print(o1.Push(1))
+# print(o1.Push(2))
+# print(o1.Push(3))
+# print(o1.Pop())
+# print(o1.Pop())
+# print("size of stack:",o1.Stacksize()) 
+
+
+# Stack implementation using list
+
+# stack=[]
+# stack.append(10)
+# stack.append(20)
+# stack.append(30)
+# print("elements in stack:",stack)
+# print(stack[-1])
+# print("popped element:",stack.pop())
+# stack.pop()
+# print("popped elements",stack)
+# print("Is empty?",len(stack)==0)
+
+
+# Stack Using collections.deque
+
+# from collections import deque
+# Stack=deque()
+# Stack.append(10)
+# Stack.append(20)
+# Stack.append(30)
+# print("elements in stack:",Stack)
+# print("top element:",Stack[-1])
+# print("popped element:",Stack.pop())
+# print("is Empty?",len(Stack)==0)
+
+# Custom Stack Class
+
+# class Stack:
+#     def __init__(self):
+#         self.stack=[]
+#     def push(self,item):
+#         self.stack.append(item)
+#         return f"pushed {item} , stack now {self.stack}"
+#     def isEmpty(self):
+#         return len(self.stack)==0
+#     def pop(self):
+#         if self.isEmpty():
+#             raise IndexError("pop from an empty stack")
+#         return self.stack.pop()
+#     def peek(self):
+#         if self.isEmpty():
+#             raise IndexError("peek from an empty stack")
+#         return self.stack[-1]
+#     def size(self):
+#         return len(self.stack)
+# s=Stack()
+# print(s.push(10))
+# print(s.push(20))
+# print(s.push(30))
+# print("peek element:",s.peek())
+# print("popped element:",s.pop())
+# print("size of stack:",s.isEmpty())
+# print("size of stack:",s.size())
+
+# Example problem
+
+# Pop the top element from the stack (the most recent unmatched opening bracket).
+# stack.pop() removes and retrieves the top element.
+# Checks if the top (opening bracket) matches the current char (closing bracket):
+# For ) → top must be (.
+# For ] → top must be [.
+# For } → top must be {.
+# If there's a mismatch, the function returns False.
+
+
+# def is_balanced(expression):
+#     stack=[]
+#     for i in expression:
+#         if i in "([{":
+#             stack.append(i)
+#         elif i in ")]}":
+#             if not stack:
+#                 return False
+#             top=stack.pop()
+#             if (i==")" and top!="(") or (i=="]" and top!="[") or (i=="}" and top!="{"):
+#                 return False
+#     return len(stack)==0
+# print(is_balanced("()[]{}"))
+# print(is_balanced("([{}])"))
+# print(is_balanced("([)]"))
+# print(is_balanced("((("))
+
